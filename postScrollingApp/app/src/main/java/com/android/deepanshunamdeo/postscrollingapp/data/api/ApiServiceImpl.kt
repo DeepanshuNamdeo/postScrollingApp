@@ -10,7 +10,8 @@ class ApiServiceImpl : ApiService{
         return Rx2AndroidNetworking.get("https://jsonplaceholder.typicode.com/posts").build().getObjectListSingle(User::class.java)
     }
 
-    override fun getComments(): Single<List<Comments>> {
-
+    override fun getComments(postId: Int): Single<List<Comments>> {
+        val url = "https://jsonplaceholder.typicode.com/posts/$postId/comments"
+        return Rx2AndroidNetworking.get(url).build().getObjectListSingle(Comments::class.java)
     }
 }

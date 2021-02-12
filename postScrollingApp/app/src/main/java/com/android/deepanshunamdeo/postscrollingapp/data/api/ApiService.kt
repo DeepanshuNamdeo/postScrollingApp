@@ -7,6 +7,6 @@ import io.reactivex.Single
 interface ApiService {
 
     fun getUsers(): Single<List<User>>
-    fun getComments(): Single<List<Comments>>
+    fun getComments(postId: Int): Single<List<Comments>>
 
 }
