@@ -17,7 +17,7 @@ import com.android.deepanshunamdeo.postscrollingapp.ui.base.ViewModelFactory
 import com.android.deepanshunamdeo.postscrollingapp.ui.main.adapter.IMainRecyclerViewAdaptor
 import com.android.deepanshunamdeo.postscrollingapp.ui.main.adapter.MainAdapter
 import com.android.deepanshunamdeo.postscrollingapp.ui.main.viewmodel.MainViewModel
-import com.mindorks.framework.mvvm.utils.Status
+import com.android.deepanshunamdeo.postscrollingapp.utils.Status
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() , IMainRecyclerViewAdaptor {

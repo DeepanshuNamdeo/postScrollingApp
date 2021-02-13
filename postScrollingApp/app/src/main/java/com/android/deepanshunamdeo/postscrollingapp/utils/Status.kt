@@ -1,4 +1,4 @@
-package com.mindorks.framework.mvvm.utils
+package com.android.deepanshunamdeo.postscrollingapp.utils
 
 enum class Status {
     SUCCESS,

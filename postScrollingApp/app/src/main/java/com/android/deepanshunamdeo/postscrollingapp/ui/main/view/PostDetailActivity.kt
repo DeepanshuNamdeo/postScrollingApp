@@ -15,7 +15,7 @@ import com.android.deepanshunamdeo.postscrollingapp.data.model.Comments
 import com.android.deepanshunamdeo.postscrollingapp.ui.base.ViewModelFactory
 import com.android.deepanshunamdeo.postscrollingapp.ui.main.adapter.CommentAdaptor
 import com.android.deepanshunamdeo.postscrollingapp.ui.main.viewmodel.CommentViewModel
-import com.mindorks.framework.mvvm.utils.Status
+import com.android.deepanshunamdeo.postscrollingapp.utils.Status
 import kotlinx.android.synthetic.main.activity_post_detail.*
 
 class PostDetailActivity : AppCompatActivity() {

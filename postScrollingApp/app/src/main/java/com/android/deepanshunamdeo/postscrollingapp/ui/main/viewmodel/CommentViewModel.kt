@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.android.deepanshunamdeo.postscrollingapp.data.model.Comments
 import com.android.deepanshunamdeo.postscrollingapp.data.repository.MainRepository
-import com.mindorks.framework.mvvm.utils.Resource
+import com.android.deepanshunamdeo.postscrollingapp.utils.Resource
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
