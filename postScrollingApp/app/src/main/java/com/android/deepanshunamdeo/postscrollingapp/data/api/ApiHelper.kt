@@ -1,10 +1,9 @@
 package com.android.deepanshunamdeo.postscrollingapp.data.api
 
-import com.android.deepanshunamdeo.postscrollingapp.data.model.Comments
 
-class ApiHelper(private val apiService: ApiService) {
+class ApiHelper(private val apiService: ApiService, private val postId:Int) {
 
-    fun getUsers() = apiService.getUsers()
-    fun getComments() = apiService.getComments(Comments().postId)
+    fun getPost() = apiService.getPosts()
+    fun getComments() = apiService.getComments(postId)
 
 }

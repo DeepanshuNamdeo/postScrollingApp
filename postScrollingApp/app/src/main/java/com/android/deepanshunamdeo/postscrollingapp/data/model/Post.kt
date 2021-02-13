@@ -2,7 +2,7 @@ package com.android.deepanshunamdeo.postscrollingapp.data.model
 
 import com.google.gson.annotations.SerializedName
 
-data class User(
+data class Post(
     @SerializedName("userId")
     val userId: Int = 0,
     @SerializedName("id")

@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.android.deepanshunamdeo.postscrollingapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,15 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PostScrollingApp">
         <activity
-            android:name=".ui.main.view.HomeActivity"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.PostScrollingApp.NoActionBar">
+            android:name=".ui.main.view.MainActivity"
+            android:label="@string/title_activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.main.view.PostDetailActivity" />
     </application>
 
 </manifest>
