@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">postScrollingApp</string>
-    <string name="title_activity_home">home</string>
+    <string name="title_activity_home">Post</string>
+    <string name="title_activity_postDetail">Post detail</string>
+    <string name="title_activity_favorite">Favorite</string>
     <string name="tab_text_1">Post</string>
     <string name="tab_text_2">Favorite</string>
 </resources>

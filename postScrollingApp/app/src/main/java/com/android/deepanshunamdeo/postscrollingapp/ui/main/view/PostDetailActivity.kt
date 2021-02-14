@@ -12,13 +12,17 @@ import com.android.deepanshunamdeo.postscrollingapp.R
 import com.android.deepanshunamdeo.postscrollingapp.data.api.ApiHelper
 import com.android.deepanshunamdeo.postscrollingapp.data.api.ApiServiceImpl
 import com.android.deepanshunamdeo.postscrollingapp.data.model.Comments
+import com.android.deepanshunamdeo.postscrollingapp.data.model.FavoritePost
 import com.android.deepanshunamdeo.postscrollingapp.ui.base.ViewModelFactory
 import com.android.deepanshunamdeo.postscrollingapp.ui.main.adapter.CommentAdaptor
 import com.android.deepanshunamdeo.postscrollingapp.ui.main.viewmodel.CommentViewModel
+import com.android.deepanshunamdeo.postscrollingapp.ui.main.viewmodel.FavoriteViewModel
 import com.android.deepanshunamdeo.postscrollingapp.utils.Status
 import kotlinx.android.synthetic.main.activity_post_detail.*
 
 class PostDetailActivity : AppCompatActivity() {
+    private lateinit var postBody: String
+    private lateinit var postTitle: String
     private var postId :Int = 0
     private lateinit var commentViewModel: CommentViewModel
     private lateinit var commentAdaptor: CommentAdaptor
@@ -41,8 +45,8 @@ class PostDetailActivity : AppCompatActivity() {
                 )
         )
         postId = intent.getIntExtra("postId",0)
-        var postTitle: String? = intent.getStringExtra("postTitle")
-        var postBody: String? = intent.getStringExtra("postBody")
+         postTitle = intent.getStringExtra("postTitle").toString()
+         postBody = intent.getStringExtra("postBody").toString()
         textViewPostTitle.text = postTitle
         textViewPostBody.text = postBody
         RecyclerViewComments.adapter = commentAdaptor
@@ -76,5 +80,10 @@ class PostDetailActivity : AppCompatActivity() {
     private fun renderList(comments:  List<Comments>) {
         commentAdaptor.addData(comments)
         commentAdaptor.notifyDataSetChanged()
+    }
+
+     fun addToFavorite(view: View) {
+        Toast.makeText(this, "post added to Favorites", Toast.LENGTH_SHORT).show()
+        FavoriteViewModel(application).addToFavorite(favoritePost = FavoritePost(postTitle,postBody))
     }
 }

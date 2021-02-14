@@ -11,8 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PostScrollingApp">
+        <activity android:name=".ui.main.view.FavoriteActivity"
+            android:label="@string/title_activity_favorite"/>
         <activity
             android:name=".ui.main.view.MainActivity"
+            android:launchMode="singleTask"
             android:label="@string/title_activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +23,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.main.view.PostDetailActivity" />
+        <activity android:name=".ui.main.view.PostDetailActivity"
+            android:label="@string/title_activity_postDetail"/>
     </application>
 
 </manifest>

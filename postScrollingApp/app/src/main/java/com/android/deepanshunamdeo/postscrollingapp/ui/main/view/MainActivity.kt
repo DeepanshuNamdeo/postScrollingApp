@@ -2,6 +2,8 @@ package com.android.deepanshunamdeo.postscrollingapp.ui.main.view
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -85,5 +87,26 @@ class MainActivity : AppCompatActivity() , IMainRecyclerViewAdaptor {
         intent.putExtra("postBody",post.body)
         startActivity(intent)
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when(item.itemId){
+            R.id.menuItemPost -> {
+                startActivity(Intent(this,MainActivity::class.java))
+               return true
+            }
+            R.id.menuItemFavorite -> {
+                startActivity(Intent(this,FavoriteActivity::class.java))
+               return true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
 
 }
